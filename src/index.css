@@ -1,0 +1,93 @@
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Animated gradient background */
+
+body{
+min-height:100vh;
+background:linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+padding:20px;
+}
+
+/* Background animation */
+
+@keyframes gradientBG{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* Main card */
+
+.container-box{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Title */
+
+.title{
+font-size:40px;
+font-weight:700;
+text-align:center;
+margin-bottom:25px;
+
+background:linear-gradient(90deg,#ff6a00,#ee0979,#00c6ff);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:textshine 5s linear infinite;
+}
+
+@keyframes textshine{
+0%{background-position:0%}
+100%{background-position:200%}
+}
+
+/* Buttons hover */
+
+button{
+transition:all .3s ease !important;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Table scroll on mobile */
+
+.table-wrapper{
+overflow-x:auto;
+margin-top:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.title{
+font-size:28px;
+}
+
+.container-box{
+padding:20px;
+}
+
+button{
+width:100%;
+margin-top:10px;
+}
+
+}
